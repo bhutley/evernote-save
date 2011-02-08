@@ -1,4 +1,16 @@
 #!/usr/bin/env python
+#
+# This script is based on kjk's (Krzysztof Kowalczyk) evernote-to-file.py script.
+# See https://github.com/kjk/web-blog for the original script.
+#
+# The script has been updated to use the latest version of Evernote
+# (or at least MY version), and it splits out the Evernote notes into
+# a file for each note, with directories created that correspond to
+# the notebook that the note lives in.
+#
+# NOTE: This script uses BeautifulSoup
+# (http://www.crummy.com/software/BeautifulSoup/) to convert the notes
+# from HTML to text.
 import sys, os.path, datetime, codecs
 import sqlite3
 from BeautifulSoup import BeautifulSoup, NavigableString
